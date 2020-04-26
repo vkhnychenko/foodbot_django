@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=vkhnychenko
 Group=vkhnychenko
-WorkingDirectory=/home/vkhnychenko/td/
-Environment="PYTHONPATH=/home/vkhnychenko/td/"
-ExecStart=/home/vkhnychenko/td/.venv/bin/python /home/vkhnychenko/td/tga/manage.py bot
+WorkingDirectory=/home/vkhnychenko/foodbot_django/
+Environment="PYTHONPATH=/home/vkhnychenko/foodbot_django/"
+ExecStart=/home/vkhnychenko/foodbot_django/.venv/bin/python /home/vkhnychenko/foodbot_django/tga/manage.py bot
 
 [Install]
 WantedBy=multi-user.target

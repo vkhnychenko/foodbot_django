@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=vkhnychenko
 Group=vkhnychenko
-WorkingDirectory=/home/vkhnychenko/td/tga/tga
-Environment="PYTHONPATH=/home/vkhnychenko/td/tga"
+WorkingDirectory=/home/vkhnychenko/foodbot_django/tga/tga
+Environment="PYTHONPATH=/home/vkhnychenko/foodbot_django/tga"
 ExecStart=/vkhnychenko/www/td/.venv/bin/gunicorn --workers 2 --bind unix:/home/vkhnychenko/run/tgadmin.sock wsgi:application
 Restart=on-failure
 
