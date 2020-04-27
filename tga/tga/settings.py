@@ -27,11 +27,11 @@ SECRET_KEY = 'uj)b65p5!b6erfg0nd+#zklng#uj*s(roz*rs=qq24ocqx%5l&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',
+                 '35.224.166.89']
 
 #ассинхронность
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
-
 
 # Application definition
 

@@ -7,7 +7,7 @@ User=vkhnychenko
 Group=vkhnychenko
 WorkingDirectory=/home/vkhnychenko/foodbot_django/tga/tga
 Environment="PYTHONPATH=/home/vkhnychenko/foodbot_django/tga"
-ExecStart=/vkhnychenko/www/td/.venv/bin/gunicorn --workers 2 --bind unix:/home/vkhnychenko/run/tgadmin.sock wsgi:application
+ExecStart=/home/vkhnychenko/td/.venv/bin/gunicorn --workers 2 --bind unix:/home/vkhnychenko/run/tgadmin.sock wsgi:application
 Restart=on-failure
 
 [Install]
