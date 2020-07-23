@@ -25,10 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['localhost',
-                 '35.224.166.89']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 
 #ассинхронность
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
@@ -83,11 +82,11 @@ WSGI_APPLICATION = 'tga.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testbot_django',
-        'USER': 'testbot_django',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASS'),
         'HOST': os.getenv('DB_HOST'),
-        'PORT': '5432',
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
@@ -131,11 +130,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #Настройки бота
-
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 TOKEN_imgbb = os.getenv('TOKEN_imgbb')
-#ADMIN_ID = [554330150, 373231488]
-ADMIN_ID = [554330150]
+ADMIN_ID = os.getenv('ADMIN_ID')
 
 PROXY_LOGIN = os.getenv('PROXY_LOGIN')
 PROXY_PASS = os.getenv('PROXY_PASS')
