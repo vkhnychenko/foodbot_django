@@ -9,7 +9,7 @@ attrs==19.3.0
 Babel==2.8.0
 certifi==2019.11.28
 chardet==3.0.4
-Django==3.0.5
+Django==3.1.13
 emoji==0.5.4
 gino==0.8.6
 idna==2.9
